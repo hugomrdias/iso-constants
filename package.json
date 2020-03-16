@@ -21,8 +21,9 @@
         "install": "node build.js > index.browser.js"
     },
     "files": [
-        "src",
-        "index.js"
+        "index.js",
+        "index.browser.js",
+        "build.js"
     ],
     "keywords": [
         "constants",
