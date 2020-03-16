@@ -1,8 +1,8 @@
 {
-    "name": "iso-url",
-    "version": "0.4.7",
-    "description": "Isomorphic/Universal WHATWG URL API with some support legacy node URL API",
-    "repository": "hugomrdias/iso-url",
+    "name": "iso-constants",
+    "version": "0.0.0",
+    "description": "Isomorphic node constants to be used in browsers or node.",
+    "repository": "hugomrdias/iso-constants",
     "author": "Hugo Dias <hugomrdias@gmail.com> (hugodias.me)",
     "license": "MIT",
     "main": "index.js",
@@ -10,21 +10,22 @@
         "node": ">=10"
     },
     "browser": {
-        "./src/url.js": "./src/url-browser.js"
+        "./index.js": "./index.browser.js"
     },
     "scripts": {
         "test": "nyc tape test.js | tap-spec",
         "test:browser": "playwright-test --runner tape | tap-spec",
         "lint": "eslint --cache *.js src/*.js",
         "cov": "yarn test && nyc report --reporter=html && sirv coverage",
-        "cov:report": "nyc report --reporter=text-lcov > coverage.lcov"
+        "cov:report": "nyc report --reporter=text-lcov > coverage.lcov",
+        "install": "node build.js > index.browser.js"
     },
     "files": [
         "src",
         "index.js"
     ],
     "keywords": [
-        "url",
+        "constants",
         "node",
         "browser"
     ],
@@ -34,7 +35,6 @@
         "@commitlint/config-conventional": "^8.3.4",
         "eslint": "^4.7.0",
         "eslint-config-halo": "^2.3.3",
-        "http-serve": "^1.0.1",
         "husky": "^4.2.3",
         "lint-staged": "^10.0.7",
         "np": "^6.2.0",
@@ -46,7 +46,7 @@
     },
     "husky": {
         "hooks": {
-            "pre-commit": "lint-staged && yarn test && yarn test:browser",
+            "pre-commit": "lint-staged && yarn test",
             "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
         }
     },
