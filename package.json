@@ -1,6 +1,6 @@
 {
     "name": "iso-constants",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "description": "Isomorphic node constants to be used in browsers or node.",
     "repository": "hugomrdias/iso-constants",
     "author": "Hugo Dias <hugomrdias@gmail.com> (hugodias.me)",
