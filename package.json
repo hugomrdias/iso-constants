@@ -38,7 +38,7 @@
         "eslint-config-halo": "^2.3.3",
         "husky": "^4.2.3",
         "lint-staged": "^10.0.7",
-        "np": "^6.2.0",
+        "np": "^7.5.0",
         "nyc": "^15.0.0",
         "playwright-test": "^0.5.0",
         "sirv-cli": "^0.4.2",
