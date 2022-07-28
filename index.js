@@ -1,3 +1,5 @@
 'use strict';
 
-module.exports = require('constants');
+const c = require('constants');
+
+module.exports = c;
